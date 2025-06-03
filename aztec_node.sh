@@ -269,16 +269,16 @@ dependencies_installation() {
         libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip >/dev/null 2>&1\"
 
     step_progress
-    run_commands "sudo iptables -I INPUT -p tcp --dport 40400 -j ACCEPT >/dev/null 2>&1"
+    run_commands "sudo iptables -I INPUT -p tcp --dport 40400 -j ACCEPT"
 
     step_progress
-    run_commands "sudo iptables -I INPUT -p udp --dport 40400 -j ACCEPT >/dev/null 2>&1"
+    run_commands "sudo iptables -I INPUT -p udp --dport 40400 -j ACCEPT"
 
     step_progress
-    run_commands "sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT >/dev/null 2>&1"
+    run_commands "sudo iptables -I INPUT -p tcp --dport 8080 -j ACCEPT"
 
     step_progress
-    run_commands "sudo sh -c 'iptables-save > /etc/iptables/rules.v4' >/dev/null 2>&1"
+    run_commands "sudo sh -c 'iptables-save > /etc/iptables/rules.v4'"
 
     step_progress
     docker_installation
