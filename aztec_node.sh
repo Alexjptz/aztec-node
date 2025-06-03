@@ -257,15 +257,15 @@ dependencies_installation() {
     }
 
     step_progress
-    run_commands "sudo apt update -y >/dev/null 2>&1 && sudo apt upgrade -y >/dev/null 2>&1"
+    run_commands "sudo apt update -y >/dev/null 2>&1 && sudo apt upgrade -y"
 
     step_progress
     run_commands "sudo apt install -y iptables-persistent"
 
     step_progress
-    run_commands "sudo apt install -y \
-        curl iptables mc build-essential git wget lz4 jq make gcc nano \
-        automake autoconf tmux htop nvme-cli libgbm1 pkg-config \
+    run_commands "sudo apt install -y \\
+        curl iptables mc build-essential git wget lz4 jq make gcc nano \\
+        automake autoconf tmux htop nvme-cli libgbm1 pkg-config \\
         libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip"
 
     step_progress
