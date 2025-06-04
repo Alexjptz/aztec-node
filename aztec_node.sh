@@ -537,20 +537,20 @@ operation_menu () {
         show_cyan "           ⚙️  OPERATION MENU"
         show_gray "────────────────────────────────────────────────────────────"
         sleep 0.3
-        menu_item 1 "🛡️" "Get Role"           "Получение роли"
-        menu_item 2 "📮" "Register Validator" "Регистрация валидатора"
-        menu_item 3 "🔄" "Update Node"        "Обновление ноды"
-        menu_item 4 "↩️" "Back"               "Вернуться в главное меню"
+        # menu_item 1 "🛡️" "Get Role"           "Получение роли"
+        menu_item 1 "📮" "Register Validator" "Регистрация валидатора"
+        menu_item 2 "🔄" "Update Node"        "Обновление ноды"
+        menu_item 3 "↩️" "Back"               "Вернуться в главное меню"
         show_gray "────────────────────────────────────────────────────────────"
         echo
 
         read -p "$(show_gray 'Select option ➤ ') " opt
         echo
         case $opt in
-        1) get_role ;;
-        2) register_validator ;;
-        3) update_node ;;
-        4) return_back; clear; return ;;
+        # 1) get_role ;;
+        1) register_validator ;;
+        2) update_node ;;
+        3) return_back; clear; return ;;
         *) incorrect_option ;;
         esac
     done
