@@ -346,7 +346,7 @@ EOF
       -v \"$HOME/my-node/node\":/data \
       aztecprotocol/aztec:latest \
       -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js \
-        start --network alpha-testnet --node --archiver --sequencer'"
+        start --network testnet --node --archiver --sequencer'"
     cd $HOME
     echo
     show_green "🎉 Aztec Sequencer Node successfully installed and running in Docker"
@@ -467,7 +467,7 @@ update_node() {
         -v \"$HOME/my-node/node\":/data \
         aztecprotocol/aztec:latest \
         -c 'node --no-warnings /usr/src/yarn-project/aztec/dest/bin/index.js \
-        start --network alpha-testnet --node --archiver --sequencer'"
+        start --network testnet --node --archiver --sequencer'"
 
     show_green "✅ Node updated successfully"
     echo
